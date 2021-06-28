@@ -6,10 +6,6 @@ import matplotlib.pyplot as plt
 import scipy.stats
 
 def pixel_consistency(prime_frame, second_frame, pts_prime, pts_second, window_size=3):
-    # prime_threshold = threshold_yen(prime_frame)
-    # second_threshold = threshold_yen(second_frame)
-    # I_prime = rescale_intensity(prime_frame, (0, prime_threshold), (0, 255))
-    # I_second = rescale_intensity(second_frame, (0, second_threshold), (0, 255))
     height, width, channel = second_frame.shape
     kernel = np.ones((window_size, window_size),np.uint8)
     
@@ -144,9 +140,6 @@ def predict(X, y, point, tau):
     # Calculating the weight matrix using the wm function we wrote      #  # earlier. 
     w = wm(point_, X_, tau)
     # Calculating parameter theta using the formula.
-    # print(X_.shape)
-    # print(w.shape)
-    # print(y.shape)
 
     theta = np.linalg.pinv(X_.T*(w * X_))*(X_.T*(w * y)) 
     # Calculating predictions.  
