@@ -8,7 +8,7 @@ matplotlib==3.4.2
 networkx==2.5.1
 numpy==1.21.0
 opencv-python==4.8.1.78
-Pillow==8.2.0
+Pillow==10.3.0
 PyOpenGL==3.1.5
 PyOpenGL-accelerate==3.1.5
 pyparsing==2.4.7
